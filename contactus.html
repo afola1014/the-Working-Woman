@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contact Us</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="theworkingwoman.css">
+<script>
+function validateForm() {
+ if (document.forms[0].name.value == "") {
+ 	alert("Name field cannot be empty.");
+	return false;
+ } // end if
+if (document.forms[0].email.value == "") {
+ 	alert("Email field cannot be empty.");
+	return false;
+ } // end if
+if (document.forms[0].city.value == "") {
+ 	alert("City field cannot be empty.");
+	return false;
+ } // end if
+if (document.forms[0].age.value == "") {
+ 	alert("Age field cannot be empty.");
+	return false;
+ } // end if
+if (document.forms[0].age.value < 13 ) {
+ 	alert("Please enter a valid age.");
+	return false;
+ } // end if
+if (document.forms[0].profession.value == "") {
+ 	alert("Profession field cannot be empty.");
+	return false;
+ } // end function validateForm
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <h1><a href="index.html"><img id="float" src="womanchair.png" alt="Working Woman Home" height="200" width="200">the Working Woman</a></h1>
+ <nav>
+     <a href="careers.html">Career</a> &nbsp; | &nbsp; 
+     <a href="fashion.html">Fashion</a> &nbsp; | &nbsp; 
+     <a href="networking.html">Networking</a> &nbsp; | &nbsp;  
+     <a href="mentalhealth.html">Mental Health</a> &nbsp; | &nbsp;   
+     <a href="contactus.html">Contact Us</a><br>
+ </nav>
+<main>
+<h1 id="contacthead">We'd love to hear from you!</h1>
+<form 	method="post" 
+	action="http://webdevbasics.net/scripts/demo.php"
+	onsubmit="return validateForm();">
+
+ <fieldset>
+ <legend>Contact Us</legend>
+
+	<label for="name">Name: </label>
+	<input type="text" name="name" id="name" required="required"><br>
+	<label for="email">Email: </label>
+	<input type="email" name="email" id="email" required="required">
+	<label for="city">City: </label>
+	<input type="text" name="city" id="city" required="required">
+	<label for="age">Age: </label>
+	<input type="text" name="age" id="age" required="required">
+	<label for="profession">Profession: </label>
+	<input type="text" name="profession" id="profession" required="required">
+	</fieldset>
+
+	<label for="comments">Comments:</label><br>
+	<textarea name="comments" id="comments" rows="15" cols="30">Enter your comments here!</textarea><br><br>
+	<input id="submit" type="submit" value="Submit">
+	
+
+</form>
+
+
+</main>
+<footer>
+ <hr>
+  <nav>
+     <a href="career.html">Career</a> &nbsp; | &nbsp; 
+     <a href="fashion.html">Fashion</a> &nbsp; | &nbsp; 
+     <a href="networking.html">Networking</a> &nbsp; | &nbsp;  
+     <a href="mentalhealth.html">Mental Health</a> &nbsp; | &nbsp;   
+     <a href="contactus.html">Contact Us</a><br>
+  </nav>
+    <i>Copyright &copy; 2019 Ashley Foland</i><br>
+  
+ 	
+</footer>
+</div>
+</body>
+</html>
